@@ -24,17 +24,11 @@ class FormComponentServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->registerHtmlBuilder();
+		
 		$this->registerCDate();
 	}
 
-	protected function registerHtmlBuilder()
-	{
-		$this->app['html'] = $this->app->share(function($app)
-		{
-			return new HtmlBuilder($app['url']);
-		});
-	}
+
 
 	private function registerCDate()
 	{
