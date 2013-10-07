@@ -19,27 +19,20 @@ add this code on **app/config/app.php**
     array(
       'providers' => array (
             other providers,
-            'Pieter\Yaml\YamlServiceProvider',
+            'Pieter\FormComponent\FormComponentServiceProvider',
         ),
       'aliases' => array (
             other aliases,
-            'Yaml'            => 'Pieter\Yaml\Facades\Yaml',
+            'CForm'           => 'Pieter\FormComponent\Facades\CDate',
         )
       ),
     )
 
-## Config
-
-If you want to create custom config, you can use default config and publish to your project config folder
-
-    ~/php artisan config:publish pieter/yaml
-
 ## How to use
 
-just create in yaml on app/config folder and call from your controller
+just call the cForm from [your-view].blade.php
 
-    \Yaml::setFile('[your_file].yml');
-    return \Yaml::parsing();
+    {{ CForm::custom_year('tahun', array(2008, 2013)) }}
 
 
 enjoy it !
