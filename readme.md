@@ -11,7 +11,7 @@ add this on your composer.json file in require tag
 
 and run from terminal
 
-    ~/php composer.phar update "pieter/yaml"
+    ~/php composer.phar update "pieter/form-component"
 
 after that,
 add this code on **app/config/app.php**
