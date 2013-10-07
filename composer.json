@@ -1,0 +1,20 @@
+{
+    "name": "pieter/form-component",
+    "description": "",
+    "authors": [
+        {
+            "name": "pieter lelaona",
+            "email": "broklyn.gagah@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x"
+    },
+    "autoload": {
+        "psr-0": {
+            "Pieter\\FormComponent": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
