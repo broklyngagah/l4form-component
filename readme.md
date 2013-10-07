@@ -7,7 +7,7 @@ This form component just for practice
 for simple way, try using composer,
 add this on your composer.json file in require tag
 
-    "pieter/yaml": "dev-master"
+    "pieter/form-component": "dev-master"
 
 and run from terminal
 
