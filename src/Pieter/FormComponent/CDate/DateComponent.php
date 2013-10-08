@@ -14,6 +14,26 @@ class DateComponent extends FormBuilder
 		parent::__construct($html, $url, $csrfToken);
 	}
 
+	public function cDate($name, $value = '', $range = array(), $selected = null, $options = array())
+	{
+
+		$date = array();
+		for($d=1; $d <= 31; ++$d) {
+			$date[$d] = $d;
+		}
+
+		$month = array();
+		for($m=1; $m <= 12; ++$m) {
+			$month[$m] = date_format(date_create("2013-$m-01"), 'M');
+		}
+
+		$date = $this->select($name, $date, $selected, $options);
+		$month = $this->select($name, $month, $selected, $options);
+
+		return $date . '-' . $month . '-' . $this->custom_year($name, $range['year'], $selected, $options);
+
+	}
+
 	public function custom_year($name, $range = array(), $selected = null, $options = array())
 	{
 		$output = array();
